@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 class CustomDivider extends StatelessWidget {
   final String userName;
   final String mail;
-  CustomDivider({this.userName, this.mail,
+
+  CustomDivider({
+    this.userName,
+    this.mail,
   });
 
   @override
@@ -16,7 +19,12 @@ class CustomDivider extends StatelessWidget {
               Column(
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.fromLTRB(8.0, 25.0, 8.0, 5.0,),
+                    padding: EdgeInsets.fromLTRB(
+                      8.0,
+                      25.0,
+                      8.0,
+                      5.0,
+                    ),
                     child: CircleAvatar(
                       radius: 25.0,
                       backgroundImage: NetworkImage(
@@ -40,7 +48,8 @@ class CustomDivider extends StatelessWidget {
                     ),
                     Row(
                       children: <Widget>[
-                        Text(mail,
+                        Text(
+                          mail,
                           style: TextStyle(color: Color(0xFF607D8B), fontSize: 14.0),
                         )
                       ],
@@ -103,6 +112,7 @@ class CustomDivider extends StatelessWidget {
       ),
     );
   }
+
   Widget getCustomDivider() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12.0),
